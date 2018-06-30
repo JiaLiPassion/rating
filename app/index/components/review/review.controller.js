@@ -12,10 +12,9 @@
     /* @ngInject */
     function ReviewController(reviewService, companyService, $state, exceptionService) {
         this.myReview = reviewService.getCurrentEditingReview();
-        this.rating = this.myReview.rating;
-        this.ratingText = getRatingText(this.rating);
+        this.ratingText = getRatingText(this.myReview.rating);
         this.ratingChanged = (rating) => {
-            this.rating = this.myReview.rating = rating;
+            this.myReview.rating = rating;
             this.ratingText = getRatingText(rating);
         }
         this.margin = true;
@@ -28,7 +27,7 @@
         this.close = function () {
             // don't keep userName and comment.
             reviewService.setCurrentEditingReview({
-                rating: this.rating,
+                rating: this.myReview.rating,
                 icon: this.myReview.icon,
                 isInit: this.myReview.isInit,
                 source: this.myReview.source
