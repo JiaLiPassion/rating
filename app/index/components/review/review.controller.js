@@ -15,7 +15,7 @@
         this.rating = this.myReview.rating;
         this.ratingText = getRatingText(this.rating);
         this.ratingChanged = (rating) => {
-            this.rating = myReview.rating = rating;
+            this.rating = this.myReview.rating = rating;
             this.ratingText = getRatingText(rating);
         }
         this.margin = true;
@@ -26,6 +26,13 @@
         });
 
         this.close = function () {
+            // don't keep userName and comment.
+            reviewService.setCurrentEditingReview({
+                rating: this.rating,
+                icon: this.myReview.icon,
+                isInit: this.myReview.isInit,
+                source: this.myReview.source
+            });
             $state.go('rating.index.home');
         }
 
