@@ -1,22 +1,17 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter.main */
-    var main = angular.module('ng-starter.main',
+    /** @namespace rating.main */
+    var main = angular.module('rating.main',
         [
-            'ng-starter.services',
-            'ng-starter.vendor'
+            'rating.services',
+            'rating.vendor'
         ]);
 
     main.config(config);
 
-    /**
-     * ng-starter.main config function.
-     * @param {$translatePartialLoaderProvider} $translatePartialLoaderProvider
-     */
     /* @ngInject */
-    function config($translatePartialLoaderProvider) {
-        $translatePartialLoaderProvider.addPart('main');
+    function config() {
     }
 
 })();

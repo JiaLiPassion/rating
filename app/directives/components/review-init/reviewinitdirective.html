@@ -1,0 +1,6 @@
+<div class="init-review-container">
+  <img ng-src="{{vm.review.icon}}" class="init-icon">
+  <div class="init-rate-title">Rate and review</div>
+  <div class="init-rate-sub-title">Share your experience to help others</div>
+  <rating rating="vm.review.rating" rating-changed="vm.ratingChangedHandler(rating)" class="init-rating" editable="vm.editable" margin="vm.margin"></rating>
+</div>

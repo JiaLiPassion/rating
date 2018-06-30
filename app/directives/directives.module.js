@@ -1,22 +1,20 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter.directives */
-    var directives = angular.module('ng-starter.directives',
+    /** @namespace rating.directives */
+    var directives = angular.module('rating.directives',
         [
-            'ng-starter.services',
-            'ng-starter.vendor'
+            'rating.services',
+            'rating.vendor'
         ]);
 
     directives.config(config);
 
     /**
-     * ng-starter.directives config function.
-     * @param {$translatePartialLoaderProvider} $translatePartialLoaderProvider
+     * rating.directives config function.
      */
     /* @ngInject */
-    function config($translatePartialLoaderProvider) {
-        $translatePartialLoaderProvider.addPart('directives');
+    function config() {
     }
 
 })();

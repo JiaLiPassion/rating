@@ -1,17 +1,17 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('ng-starter').controller('ApplicationController', ApplicationController);
+    angular.module('rating').controller('ApplicationController', ApplicationController);
 
     ApplicationController.$inject = [];
 
     /**
      * ApplicationController
      * @class
-     * @classdesc Controller method of 'ng-starter' application.
-     * @memberOf ng-starter
+     * @classdesc Controller method of 'rating' application.
+     * @memberOf rating
      */
     function ApplicationController() {
     }
-    
+
 })();

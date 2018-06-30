@@ -1,13 +1,13 @@
 (function() {
     'use strict';
 
-    angular.module('ng-starter.services').service('exceptionService', exceptionService);
+    angular.module('rating.services').service('exceptionService', exceptionService);
 
     /**
      * Exception service.
      * @class
      * @classdesc A angular service for handling the aplication exceptions
-     * @memberOf ng-starter.services
+     * @memberOf rating.services
      */
     /* @ngInject */
     function exceptionService() {

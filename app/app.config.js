@@ -1,31 +1,31 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter */
-    var ngStarter = angular.module('ng-starter', [
-        'ng-starter.services',
-        'ng-starter.directives',
-        'ng-starter.main',
-        'ng-starter.header',
-        'ng-starter.footer',
-        'ng-starter.sidemenu',
-        'ng-starter.vendor',
-        'ng-starter.index'
+    /** @namespace rating */
+    var rating = angular.module('rating', [
+        'rating.services',
+        'rating.directives',
+        'rating.main',
+        'rating.vendor',
+        'rating.index'
     ]);
 
-    ngStarter.config(config);
+    rating.config(config);
+    rating.value('getCompanyUrl', 'http://localhost:3003/companies');
+    rating.value('imageUrl', 'http://localhost:3003');
+    rating.value('getAllReviewsUrl', 'http://localhost:3003/reviews');
+    rating.value('postReview', 'https://test.hitta.se/reviews/v1/company');
 
     /**
-     * ng-starter application config.
+     * rating application config.
      * @param {$stateProvider} $stateProvider
      * @param {$urlRouterProvider} $urlRouterProvider
-     * @param {$translateProvider} $translateProvider
      * @param {$provide} $provide
      * @param {$logProvider} $logProvider
      * @param {$compileProvider} $compileProvider
      */
     /* @ngInject */
-    function config($stateProvider, $urlRouterProvider, $translateProvider, $provide, $logProvider, $compileProvider) {
+    function config($stateProvider, $urlRouterProvider, $provide, $logProvider, $compileProvider) {
 
         //Disable the log messages.
         $logProvider.debugEnabled(false);
@@ -38,11 +38,6 @@
 
         //Register the abstract states.
         registerStates($stateProvider, $urlRouterProvider);
-
-        //Register translations.
-        $translateProvider.useLoader('$translatePartialLoader', {urlTemplate: 'app/{part}/localizations/{lang}.json'});
-        $translateProvider.useSanitizeValueStrategy('escape');
-        $translateProvider.preferredLanguage('en-US');
     }
 
     /**
@@ -53,7 +48,7 @@
     /* @ngInject */
     function registerStates($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('ngstarter', {
+            .state('rating', {
                 abstract: true,
                 views: {
                     '': {
@@ -61,21 +56,6 @@
                         templateUrl: '/app/main/main.html',
                         controllerAs: 'vm'
                     },
-                    'header@ngstarter': {
-                        controller: 'HeaderController',
-                        templateUrl: '/app/header/header.html',
-                        controllerAs: 'vm'
-                    },
-                    'footer@ngstarter': {
-                        controller: 'FooterController',
-                        templateUrl: '/app/footer/footer.html',
-                        controllerAs: 'vm'
-                    },
-                    'sidemenu@ngstarter': {
-                        controller: 'SideMenuController',
-                        templateUrl: '/app/sidemenu/sidemenu.html',
-                        controllerAs: 'vm'
-                    }
                 }
             });
 

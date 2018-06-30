@@ -1,13 +1,13 @@
 (function () {
     'use strict';
 
-    angular.module('ng-starter.services').service('loggerService', loggerService);
+    angular.module('rating.services').service('loggerService', loggerService);
 
     /**
      * Logger service.
      * @class
      * @classdesc A angular service for logging.
-     * @memberOf ng-starter.services
+     * @memberOf rating.services
      */
     /* @ngInject */
     function loggerService() {

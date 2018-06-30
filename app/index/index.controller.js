@@ -1,13 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('ng-starter.index').controller('IndexController', IndexController);
+    angular.module('rating.index').controller('IndexController', IndexController);
 
     /**
      * IndexController
      * @class
-     * @classdesc Controller method of 'ng-starter.index' module.
-     * @memberOf ng-starter.index
+     * @classdesc Controller method of 'rating.index' module.
+     * @memberOf rating.index
      */
     /* @ngInject */
     function IndexController() {

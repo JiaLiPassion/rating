@@ -40,7 +40,7 @@ gulp.task('scripts:prod:bundle:js', function () {
 gulp.task('scripts:prod:bundle:html', function () {
 
     var templateCacheOptions = {
-        module: 'ng-starter',
+        module: 'rating',
         standalone: false,
         filename: 'templates.min.js',
         root: '/app'

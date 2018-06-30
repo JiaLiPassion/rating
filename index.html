@@ -2,39 +2,66 @@
 <html lang="en">
 
 <head>
-    <title>NG Starter App</title>
+    <title>Rating</title>
 
     <meta charset="utf-8">
     <meta name="author" content="Soner Çökmen <sonercokmen@gmail.com>">
     <meta name="keywords" content="angularjs,gulp,boilerplate,starter">
     <meta name="description" content="A simple starter angularjs (1.5.x) app with common services and gulp tasks on john papa's style guide.">
-
-    <!-- twitter bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/fontawesome-all.css">
     <!-- styles:css -->
-    <link rel="stylesheet" href="/style.min.css?v=1490699618504">
+    <link rel="stylesheet" href="/www/index/index.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/main/main.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/popup/popupdirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/rating/ratingdirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/review/reviewdirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/review-init/reviewinitdirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/review-summary/reviewsummarydirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/directives/components/reviews/reviewsdirective.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/index/components/home/home.css?v=1530343481406">
+    <link rel="stylesheet" href="/www/index/components/review/review.css?v=1530343481406">
     <!-- endinject -->
 </head>
 
-<body ng-app="ng-starter" ng-controller="ApplicationController as vm">
+<body ng-app="rating" ng-controller="ApplicationController as vm">
 
     <div ui-view></div>
 
     <!-- vendors:js -->
-    <script src="/vendors.min.js?v=1490699618180"></script>
+    <script src="/bower_components/jquery/dist/jquery.js?v=1530343481188"></script>
+    <script src="/bower_components/angular/angular.js?v=1530343481188"></script>
+    <script src="/bower_components/angular-translate/angular-translate.js?v=1530343481188"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.js?v=1530343481188"></script>
+    <script src="/bower_components/angularLocalStorage/dist/angularLocalStorage.min.js?v=1530343481188"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js?v=1530343481188"></script>
+    <script src="/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js?v=1530343481188"></script>
+    <script src="/bower_components/moment/moment.js?v=1530343481188"></script>
     <!-- endinject -->
 
     <!-- app:js -->
-    <script src="/app.min.js?v=1490699618431"></script>
-    <script src="/templates.min.js?v=1490699618431"></script>
+    <script src="/app/index/index.module.js?v=1530343481308"></script>
+    <script src="/app/index/components/review/review.controller.js?v=1530343481308"></script>
+    <script src="/app/index/components/home/home.controller.js?v=1530343481308"></script>
+    <script src="/app/directives/directives.module.js?v=1530343481308"></script>
+    <script src="/app/directives/components/reviews/reviewsdirective.js?v=1530343481308"></script>
+    <script src="/app/directives/components/review-summary/reviewsummarydirective.js?v=1530343481308"></script>
+    <script src="/app/directives/components/review-init/reviewinitdirective.js?v=1530343481308"></script>
+    <script src="/app/directives/components/review/reviewdirective.js?v=1530343481308"></script>
+    <script src="/app/directives/components/rating/ratingdirective.js?v=1530343481308"></script>
+    <script src="/app/directives/components/popup/popupdirective.js?v=1530343481308"></script>
+    <script src="/app/vendor/vendor.module.js?v=1530343481308"></script>
+    <script src="/app/services/services.module.js?v=1530343481308"></script>
+    <script src="/app/services/review.service.js?v=1530343481308"></script>
+    <script src="/app/services/logger.service.js?v=1530343481308"></script>
+    <script src="/app/services/http.service.js?v=1530343481308"></script>
+    <script src="/app/services/exception.service.js?v=1530343481308"></script>
+    <script src="/app/services/company.service.js?v=1530343481308"></script>
+    <script src="/app/main/main.module.js?v=1530343481308"></script>
+    <script src="/app/main/main.controller.js?v=1530343481308"></script>
+    <script src="/app/index/index.controller.js?v=1530343481308"></script>
+    <script src="/app/app.config.js?v=1530343481308"></script>
+    <script src="/app/app.controller.js?v=1530343481308"></script>
     <!-- endinject -->
-
-    <!-- twitter bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
 </body>
 
 </html>

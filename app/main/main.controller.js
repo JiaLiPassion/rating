@@ -1,13 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('ng-starter.main').controller('MainController', MainController);
+    angular.module('rating.main').controller('MainController', MainController);
 
     /**
      * MainController
      * @class
-     * @classdesc Controller method of 'ng-starter.main' module.
-     * @memberOf ng-starter.main
+     * @classdesc Controller method of 'rating.main' module.
+     * @memberOf rating.main
      */
     /* @ngInject */
     function MainController() {

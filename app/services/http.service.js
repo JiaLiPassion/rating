@@ -1,13 +1,13 @@
 (function() {
     'use strict';
 
-    angular.module('ng-starter.services').service('httpService', httpService);
+    angular.module('rating.services').service('httpService', httpService);
 
     /**
      * Abstraction for angular $http service.
      * @class
      * @classdesc Abstraction for angular $http service for improve controls over http calls.
-     * @memberOf ng-starter.services
+     * @memberOf rating.services
      */
     /* @ngInject */
     function httpService($q, $http) {

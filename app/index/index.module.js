@@ -1,23 +1,22 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter.index */
-    var index = angular.module('ng-starter.index', [
-        'ng-starter.services',
-        'ng-starter.vendor'
+    /** @namespace rating.index */
+    var index = angular.module('rating.index', [
+        'rating.services',
+        'rating.vendor'
     ]);
 
     index.config(config);
 
     /**
-     * ng-starter.index config function.
+     * rating.index config function.
      * @param {$stateProvider} $stateProvider
-     * @param {$translatePartialLoaderProvider} $translatePartialLoaderProvider
      */
     /* @ngInject */
-    function config($stateProvider, $translatePartialLoaderProvider) {
+    function config($stateProvider) {
         $stateProvider
-            .state('ngstarter.index', {
+            .state('rating.index', {
                 abstract: true,
                 url: '/index',
                 views: {
@@ -28,7 +27,7 @@
                     }
                 }
             })
-            .state('ngstarter.index.home', {
+            .state('rating.index.home', {
                 url: '/home',
                 views: {
                     'index': {
@@ -38,18 +37,16 @@
                     }
                 }
             })
-            .state('ngstarter.index.contact', {
-                url: '/contact',
+            .state('rating.index.review', {
+                url: '/review',
                 views: {
                     'index': {
-                        controller: 'ContactController',
-                        templateUrl: '/app/index/components/contact/contact.html',
+                        controller: 'ReviewController',
+                        templateUrl: '/app/index/components/review/review.html',
                         controllerAs: 'vm'
                     }
                 }
             });
-
-        $translatePartialLoaderProvider.addPart('index');
     }
 
 })();

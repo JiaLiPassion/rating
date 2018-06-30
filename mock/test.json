@@ -1,0 +1,29 @@
+{
+  "average": 4.1,
+  "total": 21,
+  "allReviews": [
+    {
+      "icon": "person",
+      "rating": 3,
+      "datetime": "2018-06-27 19:51:00",
+      "source": "hitta.se",
+      "content": "New Review"
+    },
+    {
+      "icon": "person",
+      "name": "Jia Li",
+      "rating": 3,
+      "datetime": "2018-06-25 19:51:00",
+      "source": "hitta.se",
+      "content": "Review"
+    },
+    {
+      "icon": "jiali",
+      "name": "Jia Li",
+      "rating": 4,
+      "datetime": "2018-06-29 20:20:00",
+      "source": "yelp.com",
+      "content": "Review"
+    }
+  ]
+}

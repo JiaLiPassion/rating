@@ -18,10 +18,9 @@
     "starter"
   ],
   "scripts": {
-    "development": "gulp build:dev",
-    "production": "gulp build:prod",
-    "test": "gulp test",
-    "documentation": "gulp documentation"
+    "dev": "gulp build:dev",
+    "mock": "cd mock && node index.js",
+    "serve": "gulp serve:dev"
   },
   "devDependencies": {
     "bower-files": "^3.13.3",
@@ -46,5 +45,6 @@
     "jshint-stylish": "^2.2.0",
     "path": "^0.12.7",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "dependencies": {}
 }

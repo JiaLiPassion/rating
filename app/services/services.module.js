@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter.services */
-    angular.module('ng-starter.services', []);
+    /** @namespace rating.services */
+    angular.module('rating.services', []);
 
 })();

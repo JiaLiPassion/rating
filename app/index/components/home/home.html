@@ -1,1 +1,9 @@
-﻿<h1>{{'HOME_TITLE' | translate}}</h1>
+﻿<span class="title">Reviews for: {{vm.companyName}}</span>
+<summary average="vm.average" total="vm.total" class="summary"></summary>
+<div class="line-seperator my-review-line-seperator"></div>
+<span class="my-review-title">Your review</span>
+<review ng-if="!vm.isInit" review="vm.myReview" rating-changed="vm.ratingChanged(rating)" edit="vm.edit()" editable class="my-review"></review>
+<review-init ng-if="vm.isInit" review="vm.myReview" rating-changed="vm.ratingChanged(rating)" class="my-review"></review-init>
+<div class="line-seperator reviews-line-seperator"></div>
+<span class="all-review-title">Latest review</span>
+<reviews reviews="vm.allReviews" class="reviews"></reviews>

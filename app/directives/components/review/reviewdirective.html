@@ -1,0 +1,9 @@
+<div class="review-container">
+  <img ng-src="{{vm.review.icon}}" class="icon">
+  <div class="name">{{vm.review.name ? vm.review.name : 'Anonymous'}}</div>
+  <div class="fas fa-ellipsis-h menu" ng-click="vm.edit()"></div>
+  <rating rating="vm.review.rating" rating-changed="vm.ratingChangedHandler(rating)" class="rating" editable="vm.editable"></rating>
+  <div class="info">{{vm.review.info}}</div>
+  <div ng-if="!!vm.review.content" class="content">{{vm.review.content}}</div>
+  <div ng-if="!vm.review.content" class="content content-describe" ng-click="vm.edit()">Describe your experience</div>
+</div>

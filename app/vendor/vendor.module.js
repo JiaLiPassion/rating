@@ -1,10 +1,9 @@
 (function () {
     'use strict';
 
-    /** @namespace ng-starter.vendor */
-    angular.module('ng-starter.vendor',
+    /** @namespace rating.vendor */
+    angular.module('rating.vendor',
         [
-            'pascalprecht.translate',
             'ui.router'
         ]);
 })();
