@@ -14,7 +14,12 @@
     rating.value('getCompanyUrl', 'http://localhost:3003/companies');
     rating.value('imageUrl', 'http://localhost:3003');
     rating.value('getAllReviewsUrl', 'http://localhost:3003/reviews');
-    rating.value('postReview', 'https://test.hitta.se/reviews/v1/company');
+    rating.value('updateReviewOptions', {
+        url: 'https://test.hitta.se/reviews/v1/company',
+        companyId: 'VdgWZZ___C',
+        deviceName: 'MOBILE_WEB',
+        sharedIdentifier: '15188693697264027'
+    });
 
     /**
      * rating application config.

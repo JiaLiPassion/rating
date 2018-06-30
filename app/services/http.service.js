@@ -17,7 +17,8 @@
             post: post,
             put: put,
             del: del,
-            join: join
+            join: join,
+            postWithTransform: postWithTransform
         };
 
         /**
@@ -28,14 +29,16 @@
          * @returns {Promise}
          * @private
          */
-        function call(method, url, data) {
+        function call(method, url, data, headers, transformRequest) {
 
             var deferred = $q.defer();
 
             $http({
                 method: method,
                 url: url,
-                data: data
+                data: data,
+                headers: headers,
+                transformRequest: transformRequest
             }).then(function(successResponse) {
                     deferred.resolve(successResponse.data);
                 },
@@ -64,8 +67,24 @@
          * @returns {Promise}
          * @public
          */
-        function post(url, data) {
-            return call('POST', url, data);
+        function post(url, data, headers) {
+            return call('POST', url, data, headers);
+        }
+
+        /**
+         * Send http post request to given url with data.
+         * @param {string} url
+         * @param {Object} [data]
+         * @returns {Promise}
+         * @public
+         */
+        function postWithTransform(url, data, headers) {
+            return call('POST', url, data, headers, function (obj) {
+                var str = [];
+                for (var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                return str.join("&");
+            });
         }
 
         /**

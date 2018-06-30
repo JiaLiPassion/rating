@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('rating.index').controller('ReviewController', ['reviewService', 'companyService', '$state', ReviewController]);
+    angular.module('rating.index').controller('ReviewController', ['reviewService', 'companyService', '$state', 'exceptionService', ReviewController]);
 
     /**
      * ContactController
@@ -10,7 +10,7 @@
      * @memberOf rating.index
      */
     /* @ngInject */
-    function ReviewController(reviewService, companyService, $state) {
+    function ReviewController(reviewService, companyService, $state, exceptionService) {
         this.myReview = reviewService.getCurrentEditingReview();
         this.rating = this.myReview.rating;
         this.ratingText = getRatingText(this.rating);
@@ -31,8 +31,9 @@
 
         this.save = () => {
             this.myReview.isInit = false;
-            reviewService.setCurrentEditingReview(this.myReview);
-            this.popupVisibleClass = 'popup-show';
+            reviewService.updateMyReview(this.myReview).then(() => {
+                this.popupVisibleClass = 'popup-show';
+            }, err => exceptionService.handle(err));
         }
 
         this.ok = () => {

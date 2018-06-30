@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "gulp build:dev",
     "mock": "cd mock && node index.js",
-    "serve": "gulp serve:dev"
+    "serve": "gulp server:dev"
   },
   "devDependencies": {
     "bower-files": "^3.13.3",

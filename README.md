@@ -1,67 +1,31 @@
-# angularjs-gulp-boilerplate
-A simple starter angularjs (1.5.x) app with common services and gulp tasks on john papa's style guide.
+## Install
 
-[![GitHub version](https://badge.fury.io/gh/scokmen%2Fangularjs-gulp-boilerplate.svg)](https://badge.fury.io/gh/scokmen%2Fangularjs-gulp-boilerplate)
-[![npm version](https://badge.fury.io/js/angularjs-gulp-boilerplate.svg)](http://badge.fury.io/js/angularjs-gulp-boilerplate)
-[![Bower version](https://badge.fury.io/bo/angularjs-gulp-boilerplate.svg)](http://badge.fury.io/bo/angularjs-gulp-boilerplate)
-[![Build Status](https://travis-ci.org/scokmen/angularjs-gulp-boilerplate.svg?branch=master)](https://travis-ci.org/scokmen/angularjs-gulp-boilerplate)
+1. npm install
+2. bower install
+3. npm run dev
 
-[![NPM](https://nodei.co/npm/angularjs-gulp-boilerplate.png)](https://nodei.co/npm/angularjs-gulp-boilerplate/)
+## Startup
 
-# Installation
+1. Open terminal, run:
 
-**Bower:**
-
-```javascript
-$ bower install angularjs-gulp-boilerplate
+```shell
+  npm run mock
 ```
 
-**Npm:**
+2. Open another terminal, run:
 
-```javascript
-$ npm install angularjs-gulp-boilerplate
+```shell
+  npm run server
 ```
 
-# Features
-- Well documented code
-- Folder by feature structure
-- Module based styling with LESS
-- Module based localization (English and Turkish)
-- Some useful services (`exceptionService`, `loggerService`, `httpService`)
-- Development build
-- Optimized production build
-- [JsDoc](http://usejsdoc.org/) documentation
-- [BrowserSync](https://www.browsersync.io/) integration
-- [JsHint](http://jshint.com/) integration
-- Simple dummy bootstrap template included
+## Mock
 
-### Development Build
-```sh
-$ gulp build:dev (or "npm run development")
-$ gulp server:dev
-```
+1. The mock server will provide some `mock` data from `mock/test.json`.
+2. The mock server will be a proxy to fetch data for company from `https://api.hitta.se/search/v7/app/company/VdgWZZ___C`, if I access this URL from `angular`, there will be a `CORS` error which require server side add an `access-control-allow-origin header`.
 
-### Production Build
-```sh
-$ gulp build:prod (or "npm run production")
-$ gulp server:prod
-```
+## Bonus
 
-### JsDoc Documentation
-```sh
-$ gulp documentation (or "npm run documentation")
-```
+I also implemented Bonus part.
 
-### JsHint Report
-Console output
-```sh
-$ gulp jshint:console
-```
-Html file output
-```sh
-$ gulp jshint:html
-```
-
-# License
-
-Copyright (c) 2016 Soner Çökmen, Licensed under the MIT license.
+1. In `app/app.config.js`, if `updateReviewOptions` or `updateReviewOptions.url` is not set, then will not post data.
+2. If `updateReviewOptions.url` is set, then will post data, after successfully posted data, the alert dialog will show.
