@@ -17,7 +17,7 @@ This project is based on scokmen's [angularjs-gulp-boilerplate](https://github.c
 2. Open another terminal, run:
 
 ```shell
-  npm run server
+  npm run serve
 ```
 
 ## Mock
