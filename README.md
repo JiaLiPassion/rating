@@ -1,3 +1,5 @@
+This project is based on scokmen's [angularjs-gulp-boilerplate](https://github.com/scokmen/angularjs-gulp-boilerplate).
+
 ## Install
 
 1. npm install
