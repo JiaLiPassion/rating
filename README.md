@@ -5,6 +5,9 @@ This project is based on scokmen's [angularjs-gulp-boilerplate](https://github.c
 1. npm install
 2. bower install
 3. npm run dev
+4. cd mock
+5. npm install
+6. cd ..
 
 ## Startup
 
